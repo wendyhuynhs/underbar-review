@@ -106,13 +106,16 @@
           result.push(array[i])
         }
       }
-    } else if (isSorted) {
+    } else {
       for (var i = 0; i < array.length; i++) {
-          result.push(iterator(array[i]));
-          // output.push(array[i])
+          if (!output.includes(iterator(array[i]))) {
+           output.push(iterator(array[i]))
+            result.push(array[i])
+          }
+          console.log(output)
         }
       }
-    return result;
+      return result;
   };
 
 
